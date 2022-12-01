@@ -23,3 +23,10 @@ h2, p {
 h2 {
     margin-bottom: 1rem;
 }
+
+.cutoff-text-webkit {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
