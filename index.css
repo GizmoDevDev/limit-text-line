@@ -25,7 +25,7 @@ h2 {
 }
 
 .card-group {
-    --max-line: 4;
+    --max-line: 2;
 }
 
 .cutoff-text-webkit {
@@ -39,7 +39,7 @@ h2 {
     --line-height: 1.2;
     overflow: hidden;
     line-height: var(--line-height);
-    height: calc(var(--max-line) * 1em * var(--line-height));
+    max-height: calc(var(--max-line) * 1em * var(--line-height));
 
     position: relative;
 }
