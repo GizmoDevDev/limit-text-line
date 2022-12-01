@@ -1,0 +1,8 @@
+{
+  "name": "limit-text-line",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/GizmoDevDev/limit-text-line.git",
+  "author": "Gizmo Develipoer <gizmo.dev.dev@gmail.com>",
+  "license": "MIT"
+}
