@@ -35,7 +35,7 @@ h2 {
     -webkit-line-clamp: var(--max-line);
 }
 
-.cutoff-text-native {
+.cutoff-text-native:has(+ .expend-button:not(:checked)) {
     --line-height: 1.2;
     overflow: hidden;
     line-height: var(--line-height);
@@ -44,11 +44,32 @@ h2 {
     position: relative;
 }
 
-.cutoff-text-native::before {
+.cutoff-text-native:has(+ .expend-button:not(:checked))::before {
     content:"";
     width: 100%;
     height: calc(var(--line-height) * 2em);
     position: absolute;
     bottom: 0;
     background: linear-gradient(to bottom, transparent, white);
+}
+
+.expend-button {
+    appearance: none;
+    border: thin solid black;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.expend-button:hover {
+    background-color: #AAA;
+}
+
+.expend-button::before {
+    content: "expend";
+}
+
+.expend-button:checked::before {
+    content: "collapse";
 }
