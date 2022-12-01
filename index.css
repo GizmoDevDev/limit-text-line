@@ -24,9 +24,31 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.card-group {
+    --max-line: 4;
+}
+
 .cutoff-text-webkit {
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: var(--max-line);
+}
+
+.cutoff-text-native {
+    --line-height: 1.2;
+    overflow: hidden;
+    line-height: var(--line-height);
+    height: calc(var(--max-line) * 1em * var(--line-height));
+
+    position: relative;
+}
+
+.cutoff-text-native::before {
+    content:"";
+    width: 100%;
+    height: calc(var(--line-height) * 2em);
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, white);
 }
